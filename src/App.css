@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-    background-color: papayawhip;
+  background-color: papayawhip;
 }
 
 .App-logo {
@@ -19,9 +19,36 @@
   position: relative;
 }
 
+.wrapper {
+  width: 1440px;
+  margin: 0 auto;
+}
+
 .tab-container {
   width: 200px;
+  float: left;
   background-color: lightblue;
+}
+
+.tab {
+  padding: 9px 15px;
+  display: block;
+  border-radius: 3px 3px 0px 0px;
+  background: #7FB5DA;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4c4c4c;
+  transition: all linear 0.15s;
+}
+
+.textbox {
+  width: 1000px;
+  margin-left: 50px;
+  float: left;
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+  background: #fff;
 }
 
 .App-header {
