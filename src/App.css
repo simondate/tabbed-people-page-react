@@ -7,6 +7,17 @@
   height: 80px;
 }
 
+.hero-image {
+  background-image: url("assets/image.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0 auto;
+  height: 400px;
+  position: relative;
+}
+
 .App-header {
   background-color: #222;
   height: 150px;
@@ -19,6 +30,10 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
