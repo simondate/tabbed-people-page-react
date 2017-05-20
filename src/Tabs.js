@@ -5,10 +5,10 @@ class Tabs extends Component {
   render() {
     return (
       <div className="tab-container">
-        <div className="tab">Person 1</div>
-        <div className="tab">Person 2</div>
-        <div className="tab">Person 3</div>
-        <div className="tab">Person 4</div>
+        <div className="tab">Position 1</div>
+        <div className="tab">Position 2</div>
+        <div className="tab">Position 3</div>
+        <div className="tab">Position 4</div>
       </div>
     );
   }
