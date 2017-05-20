@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Tab from './Tabs.js';
+import Tabs from './Tabs.js';
 import Textbox from './Textbox.js';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      currentTab: 0
+    }
+  }
   render() {
     return (
       <div className="App">
@@ -12,9 +18,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <div className="hero-image">s</div>
+        <div className="hero-image"/>
         <div className="wrapper">
-          <Tab />
+          <Tabs currentTab={this.state.currentTab}/>
           <Textbox />
         </div>
         <p className="App-intro">
