@@ -2,20 +2,21 @@ import React, { Component } from 'react';
 import './App.css';
 
 class Tab extends Component {
+  constructor() {
+    super();
+  }
+
   render() {
-    console.log(this.props);
+
     return (
         <button onClick={this.setActive.bind(this)} className="tab">{this.props.name}</button>
     );
   }
 
   setActive() {
-    console.log(this.props.num);
-    const num = this.props.num;
-    this.props.setActive(num);
+    console.log(this.props);
+    this.props.setActive(this.props.num);
   }
-
-
 }
 
 export default Tab;

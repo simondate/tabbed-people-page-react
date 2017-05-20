@@ -11,6 +11,12 @@ class App extends Component {
       currentTab: 0
     }
   }
+
+  changeTab(newTab) {
+    console.log('Changing tab in app.js');
+    this.setState({currentTab: newTab});
+  }
+
   render() {
     return (
       <div className="App">
@@ -20,8 +26,8 @@ class App extends Component {
         </div>
         <div className="hero-image"/>
         <div className="wrapper">
-          <Tabs currentTab={this.state.currentTab}/>
-          <Textbox />
+          <Tabs changeTab={this.changeTab.bind(this)}/>
+          <Textbox current={this.state.currentTab}/>
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.

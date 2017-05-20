@@ -6,17 +6,20 @@ class Tabs extends Component {
   constructor() {
     super();
     console.log(this.props);
+    this.state = {
+      currentTab: 0
+    }
     //this.setActive(this.props.currentTab);
   }
 
   setActive(currentTab){
     console.log('in tabs');
     console.log(currentTab);
+    this.props.changeTab(currentTab);
   }
 
   render() {
     console.log(this.props);
-    this.setActive(this.props.currentTab);
     return (
       <div className="tab-container">
         <Tab setActive={this.setActive.bind(this)} name="Woman" description="She is holding some fruit." num="0"/>
