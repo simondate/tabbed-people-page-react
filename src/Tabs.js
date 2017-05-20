@@ -10,6 +10,7 @@ class Tabs extends Component {
   }
 
   setActive(currentTab){
+    console.log('in tabs');
     console.log(currentTab);
   }
 
@@ -18,9 +19,9 @@ class Tabs extends Component {
     this.setActive(this.props.currentTab);
     return (
       <div className="tab-container">
-        <Tab name="Woman" description="She is holding some fruit."/>
-        <Tab name="Topless guy" description="What a glorious beard."/>
-        <Tab name="Spear guy" description="He doesn't seem to keen on whats happening."/>
+        <Tab setActive={this.setActive.bind(this)} name="Woman" description="She is holding some fruit." num="0"/>
+        <Tab setActive={this.setActive.bind(this)} name="Topless guy" description="What a glorious beard." num="1"/>
+        <Tab setActive={this.setActive.bind(this)} name="Spear guy" description="He doesn't seem to keen on whats happening." num="2"/>
       </div>
     );
   }
