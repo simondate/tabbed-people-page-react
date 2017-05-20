@@ -5,7 +5,8 @@ class Textbox extends Component {
   render() {
     return (
       <div className="textbox">
-        <div className="textbox-inner">My text goes here </div>
+        <div className="textbox-title">My title goes here </div>
+        <div className="textbox-body">My text goes here </div>
       </div>
     );
   }
