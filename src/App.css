@@ -44,11 +44,16 @@
 .textbox {
   width: 1000px;
   margin-left: 50px;
+  text-align: left;
   float: left;
   padding: 15px;
   border-radius: 3px;
   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
   background: #fff;
+}
+
+.textbox-body {
+  margin-left: 30px;
 }
 
 .App-header {
