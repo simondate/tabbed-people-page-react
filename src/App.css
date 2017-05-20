@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+    background-color: papayawhip;
 }
 
 .App-logo {
@@ -16,6 +17,11 @@
   margin: 0 auto;
   height: 400px;
   position: relative;
+}
+
+.tab-container {
+  width: 200px;
+  background-color: lightblue;
 }
 
 .App-header {
