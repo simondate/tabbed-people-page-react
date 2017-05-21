@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import Tab from './Tab.js'
+import Data from './data/data.json';
 
 class Tabs extends Component {
   constructor() {
     super();
-    console.log(this.props);
+    console.log(Data);
     this.state = {
       currentTab: 0
     }
@@ -22,9 +23,9 @@ class Tabs extends Component {
     console.log(this.props);
     return (
       <div className="tab-container">
-        <Tab setActive={this.setActive.bind(this)} name="Woman" description="She is holding some fruit." num="0"/>
-        <Tab setActive={this.setActive.bind(this)} name="Topless guy" description="What a glorious beard." num="1"/>
-        <Tab setActive={this.setActive.bind(this)} name="Spear guy" description="He doesn't seem to keen on whats happening." num="2"/>
+        <Tab setActive={this.setActive.bind(this)} name={Data[0].title} description={Data[0].text} num="0"/>
+        <Tab setActive={this.setActive.bind(this)} name={Data[1].title} description={Data[1].text} num="1"/>
+        <Tab setActive={this.setActive.bind(this)} name={Data[2].title} description={Data[2].text} num="2"/>
       </div>
     );
   }
