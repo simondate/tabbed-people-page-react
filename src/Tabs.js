@@ -14,12 +14,25 @@ class Tabs extends Component {
     this.props.changeTab(Data[i].title, Data[i].text);
   }
 
+  hello() {
+
+  }
+
+  createTab(tab, i) {
+
+    return <Tab setActive={this.setActive.bind(this)} name={tab.title} description={tab.text} num={i}/>;
+  }
+
+  createTabs(data){
+    console.log(data.map);
+    return data.map(this.createTab, this);
+  }
+
   render() {
     return (
+
       <div className="tab-container">
-        <Tab setActive={this.setActive.bind(this)} name={Data[0].title} description={Data[0].text} num="0"/>
-        <Tab setActive={this.setActive.bind(this)} name={Data[1].title} description={Data[1].text} num="1"/>
-        <Tab setActive={this.setActive.bind(this)} name={Data[2].title} description={Data[2].text} num="2"/>
+        {this.createTabs(Data)}
       </div>
     );
   }
