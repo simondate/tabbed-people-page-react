@@ -14,23 +14,16 @@ class Tabs extends Component {
     this.props.changeTab(Data[i].title, Data[i].text);
   }
 
-  hello() {
-
-  }
-
   createTab(tab, i) {
-
-    return <Tab setActive={this.setActive.bind(this)} name={tab.title} description={tab.text} num={i}/>;
+    return <Tab setActive={this.setActive.bind(this)} name={tab.title} description={tab.text} num={i} key={i}/>;
   }
 
   createTabs(data){
-    console.log(data.map);
     return data.map(this.createTab, this);
   }
 
   render() {
     return (
-
       <div className="tab-container">
         {this.createTabs(Data)}
       </div>

@@ -13,7 +13,6 @@ class Tab extends Component {
   }
 
   setActive() {
-    console.log(this.props);
     this.props.setActive(this.props.num);
   }
 }
