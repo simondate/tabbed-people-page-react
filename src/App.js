@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Tabs from './Tabs.js';
 import Textbox from './Textbox.js';
+import {Router, Route, IndexRoute, HashHistory} from 'react-router'; 
 
 class App extends Component {
   constructor() {
