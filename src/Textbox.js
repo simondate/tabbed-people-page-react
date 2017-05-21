@@ -5,8 +5,8 @@ class Textbox extends Component {
   render() {
     return (
       <div className="textbox">
-        <h3 className="textbox-title">{this.props.current}</h3>
-        <div className="textbox-body">My text goes here </div>
+        <h3 className="textbox-title">{this.props.title}</h3>
+        <div className="textbox-body">{this.props.text}</div>
       </div>
     );
   }

@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 
 class Tab extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
 
   render() {
-
     return (
         <button onClick={this.setActive.bind(this)} className="tab">{this.props.name}</button>
     );

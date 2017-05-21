@@ -6,21 +6,15 @@ import Data from './data/data.json';
 class Tabs extends Component {
   constructor() {
     super();
-    console.log(Data);
-    this.state = {
-      currentTab: 0
-    }
+    console.log(Data.length);
     //this.setActive(this.props.currentTab);
   }
 
-  setActive(currentTab){
-    console.log('in tabs');
-    console.log(currentTab);
-    this.props.changeTab(currentTab);
+  setActive(i){
+    this.props.changeTab(Data[i].title, Data[i].text);
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="tab-container">
         <Tab setActive={this.setActive.bind(this)} name={Data[0].title} description={Data[0].text} num="0"/>
