@@ -1,13 +1,21 @@
 [{
-    "title": "Woman",
-    "text": "She is holding some fruit."
+  "heroImage": {
+    "src": "assets/image.jpg"
   },
-  {
-    "title": "Topless guy",
-    "text": "What a glorious beard."
-  },
-  {
-    "title": "Spear guy",
-    "text": "He doesn't seem to keen on whats happening."
-  }
-]
+  "items": [{
+      "title": "Woman",
+      "text": "She is holding some fruit.",
+      "hotspot": [10,10,10,10]
+    },
+    {
+      "title": "Topless guy",
+      "text": "What a glorious beard.",
+      "hotspot": [20,30,10,10]
+    },
+    {
+      "title": "Spear guy",
+      "text": "He doesn't seem to keen on whats happening.",
+      "hotspot": [60,70,10,10]
+    }
+  ]
+}]

@@ -4,18 +4,18 @@ import Tab from './Tab.js'
 import Data from './data/data.json';
 
 class Tabs extends Component {
-  constructor() {
-    super();
-    console.log(Data.length);
-    //this.setActive(this.props.currentTab);
+  constructor(props) {
+    super(props);
+    console.log(this);
+    this.setCurrentTab(this.props.currentTab);
   }
 
-  setActive(i){
-    this.props.changeTab(Data[i].title, Data[i].text);
+  setCurrentTab(i){
+    this.props.changeTab(i);
   }
 
   createTab(tab, i) {
-    return <Tab setActive={this.setActive.bind(this)} name={tab.title} description={tab.text} num={i} key={i}/>;
+    return <Tab setActive={this.setCurrentTab.bind(this)} name={tab.title} description={tab.text} num={i} key={i}/>;
   }
 
   createTabs(data){
@@ -25,7 +25,7 @@ class Tabs extends Component {
   render() {
     return (
       <div className="tab-container">
-        {this.createTabs(Data)}
+        {this.createTabs(Data[0].items)}
       </div>
     );
   }
