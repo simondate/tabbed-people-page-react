@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import Tab from './Tab.js'
 import Data from './data/data.json';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 
 class Tabs extends Component {
   constructor(props) {
@@ -20,7 +21,13 @@ class Tabs extends Component {
   }
 
   createTab(tab, i) {
-    return <Tab setActive={this.setCurrentTab.bind(this)} isActive={this.isActive(i)} name={tab.title} num={i} key={i}/>;
+    return <div>
+      <Router>
+        <Link to={`/${i}`}> <Tab setActive={this.setCurrentTab.bind(this)} isActive={this.isActive(i)} name={tab.title} num={i} key={i}/></Link>
+      </Router>
+
+
+    </div>;
   }
 
   createTabs(data) {
