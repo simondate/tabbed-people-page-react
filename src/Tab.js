@@ -1,18 +1,22 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
 class Tab extends Component {
-  // constructor() {
-  //   super();
-  // }
+  isActive() {
+    if (this.props.isActive) {
+      return "active";
+    } else {
+      return "";
+    }
+  }
 
   render() {
     return (
-        <button onClick={this.setActive.bind(this)} className="tab">{this.props.name}</button>
+      <button onClick={this.tabSelected.bind(this)} className={"tab " + this.isActive()}>{this.props.name}</button>
     );
   }
 
-  setActive() {
+  tabSelected() {
     this.props.setActive(this.props.num);
   }
 }

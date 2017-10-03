@@ -4,10 +4,10 @@ import './App.css';
 class Hotspot extends Component {
   constructor(props) {
     super(props);
-    console.log(this.generateProps());
+    console.log(props);
   }
 
-  generateProps() {
+  formatStyle() {
     return {
       top: this.props.hotspot[0] + '%',
       left: this.props.hotspot[1] + '%',
@@ -18,11 +18,12 @@ class Hotspot extends Component {
 
   render() {
     return (
-        <div onClick={this.setActive.bind(this)} style={this.generateProps()} className="hotspot"></div>
+        <div onClick={this.setActive.bind(this)} style={this.formatStyle()} className="hotspot"></div>
     );
   }
 
   setActive() {
+    console.log(this.props.num);
     this.props.setActive(this.props.num);
   }
 }

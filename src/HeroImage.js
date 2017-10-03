@@ -11,11 +11,10 @@ class HeroImage extends Component {
 
   render() {
     return (
-        <div className="hero-image-container">
-        <img className="hero-image" src={this.props.image}/>
+      <div className="hero-image-container">
+        <img className="hero-image" src={Data[0].heroImage.src} alt={Data[0].heroImage.alt}/>
         <div className="hero-image-hotspot-container">
           {this.createHotspots(Data[0].items)}
-          hello
         </div>
       </div>
     );
@@ -23,15 +22,14 @@ class HeroImage extends Component {
 
   createHotspots(data){
     return data.map(this.createHotspot, this);
-    return null
   }
 
   createHotspot(item, i) {
-   return <Hotspot hotspot={item.hotspot} key={i}/>;
+   return <Hotspot setActive={this.changeTab.bind(this)} hotspot={item.hotspot} num={i} key={i}/>;
   }
 
-  setActive() {
-    this.props.setActive(this.props.num);
+  changeTab(i) {
+    this.props.changeTab(i);
   }
 }
 

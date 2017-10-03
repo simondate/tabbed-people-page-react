@@ -1,6 +1,7 @@
 [{
   "heroImage": {
-    "src": "assets/image.jpg"
+    "src": "assets/image.jpg",
+    "alt": "a fountain in Rome"
   },
   "items": [{
       "title": "Woman",
@@ -15,7 +16,7 @@
     {
       "title": "Spear guy",
       "text": "He doesn't seem to keen on whats happening.",
-      "hotspot": [60,70,10,10]
+      "hotspot": [60,70]
     }
   ]
 }]

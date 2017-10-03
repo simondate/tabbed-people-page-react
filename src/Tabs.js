@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import Tab from './Tab.js'
 import Data from './data/data.json';
@@ -10,15 +10,20 @@ class Tabs extends Component {
     this.setCurrentTab(this.props.currentTab);
   }
 
-  setCurrentTab(i){
+  setCurrentTab(i) {
     this.props.changeTab(i);
   }
 
-  createTab(tab, i) {
-    return <Tab setActive={this.setCurrentTab.bind(this)} name={tab.title} description={tab.text} num={i} key={i}/>;
+  isActive(id) {
+    console.log(this.props.currentTab === id);
+    return this.props.currentTab === id;
   }
 
-  createTabs(data){
+  createTab(tab, i) {
+    return <Tab setActive={this.setCurrentTab.bind(this)} isActive={this.isActive(i)} name={tab.title} num={i} key={i}/>;
+  }
+
+  createTabs(data) {
     return data.map(this.createTab, this);
   }
 
